@@ -1,6 +1,7 @@
+import { router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
-import { Text, View, Button } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 
 SplashScreen.preventAutoHideAsync(); // Prevent it from auto-hiding
 
@@ -21,9 +22,9 @@ export default function Index() {
         backgroundColor: "#C62C2C",
       }}
     >
-      <View >
+      <TouchableOpacity onPress={()=> router.push("/(tabs)/Home")}> 
         <Text> Go to Home Page </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
