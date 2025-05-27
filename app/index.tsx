@@ -1,29 +1,14 @@
 import { router } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import React, { useEffect } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
-
-SplashScreen.preventAutoHideAsync(); // Prevent it from auto-hiding
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
-  useEffect(() => {
-    const prepare = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1500)); // Delay for 2.5 seconds
-      await SplashScreen.hideAsync(); // Hide splash screen manually
-    };
-    prepare();
-  }, []);
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#C62C2C",
-      }}
-    >
-      <TouchableOpacity onPress={()=> router.push("/(tabs)/Home")}> 
-        <Text> Go to Home Page </Text>
+    <View className="flex-1 justify-center items-center bg-[#C62C2C]">
+      <TouchableOpacity onLongPress={() => router.push("/(tabs)/Home")}>
+        <View className="bg-white p-4 rounded-lg shadow-lg">
+          <Text className="text-xl text-red-500"> Go to Home Page </Text>
+        </View>
       </TouchableOpacity>
     </View>
   );
