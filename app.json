@@ -4,7 +4,7 @@
     "slug": "Rokto",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/রক্ত.png",
     "scheme": "rokto",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,25 +13,26 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/Brown And White Minimalist Blank Page A4 Document.png",
+        "backgroundColor": "#C62C2C"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/রক্ত.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "image": "./assets/images/Brown And White Minimalist Blank Page A4 Document.png",
+          "imageWidth": 1200,
+          "resizeMode": "cover",
+          "backgroundColor": "#C62C2C",
+          "imageResizeMode": "cover"
         }
       ]
     ],
