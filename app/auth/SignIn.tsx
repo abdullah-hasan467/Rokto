@@ -1,6 +1,6 @@
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
-  Alert,
   Image,
   Keyboard,
   KeyboardAvoidingView,
@@ -19,7 +19,6 @@ import {
   dhakaAreas,
   districts,
 } from "../../components/SignupData";
-import { router } from "expo-router";
 
 export default function SignUp({ navigation }: { navigation: any }) {
   const [firstName, setFirstName] = useState("");
@@ -265,7 +264,7 @@ export default function SignUp({ navigation }: { navigation: any }) {
 
             {/* Done Button */}
             <TouchableOpacity
-               onPress={() => router.push("/(tabs)/Home")}
+              onPress={() => router.replace("/(tabs)/Home")}
               className="bg-[#C62C2C] rounded-lg py-3 mb-8 mt-4"
             >
               <Text className="text-white text-center font-semibold text-lg">
