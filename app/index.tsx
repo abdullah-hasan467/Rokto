@@ -1,15 +1,30 @@
 import { router } from "expo-router";
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StatusBar, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <View className="flex-1 justify-center items-center bg-[#C62C2C]">
-      <TouchableOpacity onLongPress={() => router.push("/(tabs)/Home")}>
-        <View className="bg-white p-4 rounded-lg shadow-lg">
-          <Text className="text-xl text-red-500"> Go to Home Page </Text>
-        </View>
+    <SafeAreaView className="flex-1 bg-white justify-center items-center px-6">
+      <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+
+      <TouchableOpacity
+        className="bg-[#C62C2C] w-full rounded-xl py-4 mb-4"
+        onPress={() => router.push("/auth/Login")}
+      >
+        <Text className="text-white text-center text-lg font-semibold">
+          লগইন করুন
+        </Text>
       </TouchableOpacity>
-    </View>
+
+      <TouchableOpacity
+        className="border border-[#C62C2C] w-full rounded-xl py-4"
+        onPress={() => router.push("/auth/SignIn")}
+      >
+        <Text className="text-[#C62C2C] text-center text-lg font-semibold">
+          একাউন্ট খুলুন
+        </Text>
+      </TouchableOpacity>
+    </SafeAreaView>
   );
 }
